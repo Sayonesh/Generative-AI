@@ -15,7 +15,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'  # or any version you need
+          python-version: '3.8'  
 
       - name: Install dependencies
         run: |
@@ -24,7 +24,6 @@ jobs:
 
       - name: Run your application
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}  # Access the secret
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}  # For accessing the secret
         run: |
-          # Your command to run the FastAPI app or any tests
           python RAGCode.py
